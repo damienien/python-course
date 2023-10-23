@@ -11,4 +11,4 @@ def dodge(x, y):
 plt.axis('off')
 final_img = dodge(original_img, img_smoothing)
 plt.imshow(final_img, cmap="gray", vmin=200, vmax=255)
-cv2.imwrite('sketch.png', final_img)
+cv2.imwrite('./img/sketch.png', final_img)
