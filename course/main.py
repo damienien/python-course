@@ -175,3 +175,87 @@ user = {
 
 if 'age' not in user.keys():
     user['age'] = int(input('Entrer votre âge : '))
+    
+    
+expr = 1
+# Condition
+if expr:
+    pass
+# Boucle
+for i in range(0, 10):
+    pass
+# Fonction
+def get_cars():
+    pass
+# Classe (POO)
+class User:
+    pass
+
+# Définition de la fonction d'addition
+def addition(*args):
+    result = 0
+    for arg in args:
+        result += arg
+    return result
+    
+# Appel de la fonction d'addition
+result = addition(1, 5, 17, 9)
+print(result)
+
+# Définition de la fonction show_user_details
+def show_user_details(**kwargs):
+    for key, value in kwargs.items():
+        print(f'{key} - {value}')
+        
+# Appel de la fonction show_user_details
+show_user_details(first_name = 'John',
+                last_name = 'Doe',
+                age = 22,
+                size = 1.78)
+
+# Définition de la fonction d'addition
+def addition(x:int, y:int) -> int:
+    return x + y
+
+# Définition de la fonction greetings
+def greetings(user:dict[str, str]) -> None:
+    print(f'Hello {user["first_name"]}!')
+    
+# Définition de la fonction get_max
+# A vous de l'implémenter :)
+def get_max(numbers:list[float]) -> float:
+    result = 0
+    for i in numbers:
+        if(i > result):
+            result = i
+    print(result)
+        
+get_max([1,6,3,2])
+
+def get_users():
+    """
+    Return a list of all users.
+    A user is defined by their first name, last name and age.
+    """
+    return [
+        {
+            "first_name": "John",
+            "last_name": "Doe",
+            "age": 22
+        },
+        {
+            "first_name": "Jane",
+            "last_name": "Doe",
+            "age": 20
+        }
+    ]
+help(get_users)
+
+# Exemple d'une expression lambda additionnant x et y
+lambda x, y: x + y
+print(lambda x, y: x + y)
+
+# Nous pouvons lui donner un nom en l'affectant à une variable
+# Ainsi nous pouvons l'appeler
+addition = lambda x, y: x + y
+print(addition(5, 8))
